@@ -13,10 +13,12 @@
 		FF2A3FD8254ED320007027ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2A3FD6254ED320007027ED /* Main.storyboard */; };
 		FF2A3FDA254ED322007027ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF2A3FD9254ED322007027ED /* Assets.xcassets */; };
 		FF2A3FDD254ED322007027ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF2A3FDB254ED322007027ED /* LaunchScreen.storyboard */; };
+		FF2A3FEB254ED725007027ED /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = FF2A3FE9254ED725007027ED /* script.js */; };
+		FF2A3FEC254ED725007027ED /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = FF2A3FEA254ED725007027ED /* style.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FF2A3FCD254ED320007027ED /* Webkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Webkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF2A3FCD254ED320007027ED /* LearnWebKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnWebKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2A3FD0254ED320007027ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF2A3FD2254ED320007027ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FF2A3FD4254ED320007027ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		FF2A3FD9254ED322007027ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF2A3FDC254ED322007027ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FF2A3FDE254ED322007027ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF2A3FE9254ED725007027ED /* script.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		FF2A3FEA254ED725007027ED /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,7 @@
 		FF2A3FCE254ED320007027ED /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FF2A3FCD254ED320007027ED /* Webkit.app */,
+				FF2A3FCD254ED320007027ED /* LearnWebKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,6 +63,8 @@
 				FF2A3FD0254ED320007027ED /* AppDelegate.swift */,
 				FF2A3FD2254ED320007027ED /* SceneDelegate.swift */,
 				FF2A3FD4254ED320007027ED /* ViewController.swift */,
+				FF2A3FE9254ED725007027ED /* script.js */,
+				FF2A3FEA254ED725007027ED /* style.css */,
 				FF2A3FD6254ED320007027ED /* Main.storyboard */,
 				FF2A3FD9254ED322007027ED /* Assets.xcassets */,
 				FF2A3FDB254ED322007027ED /* LaunchScreen.storyboard */,
@@ -70,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FF2A3FCC254ED320007027ED /* Webkit */ = {
+		FF2A3FCC254ED320007027ED /* LearnWebKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FF2A3FE1254ED322007027ED /* Build configuration list for PBXNativeTarget "Webkit" */;
+			buildConfigurationList = FF2A3FE1254ED322007027ED /* Build configuration list for PBXNativeTarget "LearnWebKit" */;
 			buildPhases = (
 				FF2A3FC9254ED320007027ED /* Sources */,
 				FF2A3FCA254ED320007027ED /* Frameworks */,
@@ -82,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = Webkit;
+			name = LearnWebKit;
 			productName = Webkit;
-			productReference = FF2A3FCD254ED320007027ED /* Webkit.app */;
+			productReference = FF2A3FCD254ED320007027ED /* LearnWebKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +107,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FF2A3FC8254ED320007027ED /* Build configuration list for PBXProject "Webkit" */;
+			buildConfigurationList = FF2A3FC8254ED320007027ED /* Build configuration list for PBXProject "LearnWebKit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +120,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF2A3FCC254ED320007027ED /* Webkit */,
+				FF2A3FCC254ED320007027ED /* LearnWebKit */,
 			);
 		};
 /* End PBXProject section */
@@ -125,6 +131,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF2A3FDD254ED322007027ED /* LaunchScreen.storyboard in Resources */,
+				FF2A3FEB254ED725007027ED /* script.js in Resources */,
+				FF2A3FEC254ED725007027ED /* style.css in Resources */,
 				FF2A3FDA254ED322007027ED /* Assets.xcassets in Resources */,
 				FF2A3FD8254ED320007027ED /* Main.storyboard in Resources */,
 			);
@@ -322,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FF2A3FC8254ED320007027ED /* Build configuration list for PBXProject "Webkit" */ = {
+		FF2A3FC8254ED320007027ED /* Build configuration list for PBXProject "LearnWebKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF2A3FDF254ED322007027ED /* Debug */,
@@ -331,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FF2A3FE1254ED322007027ED /* Build configuration list for PBXNativeTarget "Webkit" */ = {
+		FF2A3FE1254ED322007027ED /* Build configuration list for PBXNativeTarget "LearnWebKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FF2A3FE2254ED322007027ED /* Debug */,
