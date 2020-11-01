@@ -10,27 +10,28 @@ import WebKit
 
 class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
+    @IBOutlet var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let myURL = URL(string:"https://www.google.com")
         let myRequest = URLRequest(url: myURL!)
         
-        let config = WKWebViewConfiguration()
-        
-        let webView = WKWebView(frame: view.bounds, configuration: config)
-        
         webView.navigationDelegate = self
-        view.addSubview(webView)
-        
-        
-        webView.translatesAutoresizingMaskIntoConstraints = false
-        webView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-                webView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-                webView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-                webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         webView.load(myRequest)
         
     }
+    
+    @IBAction func BackPressed(_ sender: UIBarButtonItem) {
+        
+        webView.goBack()
+        
+    }
+    
+    @IBAction func forwardPressed(_ sender: UIBarButtonItem) {
+        webView.goForward()
+    }
+    
     
 }

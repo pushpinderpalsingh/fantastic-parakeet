@@ -15,9 +15,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VdY-3g-VDG">
+                                <rect key="frame" x="0.0" y="826" width="414" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="mkQ-L4-6ac"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Go Back" image="arrowshape.turn.up.left" catalog="system" id="Pta-ZH-UbQ">
+                                        <connections>
+                                            <action selector="BackPressed:" destination="BYZ-38-t0r" id="TQk-Yv-kwM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Go forward" image="arrowshape.turn.up.forward" catalog="system" id="vgr-vX-Pm2">
+                                        <connections>
+                                            <action selector="forwardPressed:" destination="BYZ-38-t0r" id="yeb-zg-7OP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtP-Pl-vOl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="782"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VdY-3g-VDG" firstAttribute="top" secondItem="dtP-Pl-vOl" secondAttribute="bottom" id="51d-ia-pby"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dtP-Pl-vOl" secondAttribute="trailing" id="O9X-dE-rRL"/>
+                            <constraint firstItem="VdY-3g-VDG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pt4-4C-osX"/>
+                            <constraint firstItem="VdY-3g-VDG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ThC-12-Sh9"/>
+                            <constraint firstItem="dtP-Pl-vOl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vmp-JW-u4q"/>
+                            <constraint firstAttribute="bottom" secondItem="VdY-3g-VDG" secondAttribute="bottom" id="W4D-nF-oUa"/>
+                            <constraint firstItem="dtP-Pl-vOl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qhO-fV-gfE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="dtP-Pl-vOl" id="oDy-7R-36t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +65,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.forward" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
