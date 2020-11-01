@@ -7,13 +7,18 @@
 
 import UIKit
 import WebKit
+import Lottie
 
-class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+class ViewController: UIViewController, WKUIDelegate {
     
     @IBOutlet var webView: WKWebView!
+    @IBOutlet var loadingAnimation: AnimationView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.isHidden = true
+        loadingAnimation.loopMode = .loop
+        loadingAnimation.play()
         
         let myURL = URL(string:"https://www.google.com")
         let myRequest = URLRequest(url: myURL!)
@@ -34,4 +39,14 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     }
     
     
+}
+
+extension ViewController: WKNavigationDelegate {
+
+    
+    // 4. WKWebView finish loading
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        loadingAnimation.isHidden = true
+        webView.isHidden = false
+    }
 }
