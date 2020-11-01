@@ -8,7 +8,7 @@
 import UIKit
 import WebKit
 
-class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKScriptMessageHandler {
+class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +31,6 @@ class ViewController: UIViewController, WKUIDelegate, WKNavigationDelegate, WKSc
                 webView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         webView.load(myRequest)
         
-    }
-    
-    func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-        print(message.body)
     }
     
 }
