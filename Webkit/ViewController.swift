@@ -43,10 +43,8 @@ class ViewController: UIViewController, WKUIDelegate {
 
 extension ViewController: WKNavigationDelegate {
 
-    
-    // 4. WKWebView finish loading
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        loadingAnimation.isHidden = true
+        loadingAnimation.removeFromSuperview()
         webView.isHidden = false
     }
 }
